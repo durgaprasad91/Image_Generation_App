@@ -77,6 +77,7 @@ function App() {
     <div className="app-container">
       <h1 className="app-title">Image Generation App</h1>
 
+      {/* Main content layout: input section on left, preview and history on right */}
       <div className="content-layout">
         <div className="input-section">
           <Upload imageUrl={imageUrl} setImage={setImage} error={imageUploadError} />
