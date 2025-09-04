@@ -1,0 +1,39 @@
+/* src/StyleDropdown.css */
+
+.style-dropdown-container {
+  position: relative;
+  width: 100%;
+}
+
+.style-dropdown-field {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  background-color: var(--card-background);
+  appearance: none;
+  padding-right: 2.5rem; /* Make more space for custom arrow */
+  font-size: 1rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.style-dropdown-field:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+.style-dropdown-arrow {
+  position: absolute;
+  inset-y: 0;
+  right: 0.75rem; /* Adjusted right position */
+  display: flex;
+  align-items: center;
+  color: var(--secondary-color);
+  pointer-events: none;
+  font-size: 1.2rem; /* Larger arrow */
+}

@@ -1,0 +1,25 @@
+/* src/Spinner.css */
+
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure spinner fills parent height */
+  width: 100%; /* Ensure spinner fills parent width */
+}
+
+.spinner-animation {
+  animation: spin 1s linear infinite;
+  border-radius: 50%;
+  height: 2.2rem;
+  width: 2.2rem;
+  border-top: 3px solid var(--primary-color); /* Thicker and primary color */
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid transparent;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

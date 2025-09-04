@@ -1,0 +1,107 @@
+/* src/App.css */
+
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #6a737d;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --border-color: #e0e0e0;
+  --text-color: #333333;
+  --heading-color: #1a1a1a;
+  --error-color: #e53e3e;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Using a modern font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  color: var(--text-color);
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px; /* Increased max-width for a more spacious feel */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+.app-title {
+  font-size: 3rem; /* Larger heading */
+  font-weight: 800;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: -0.05em; /* Tighter letter spacing for headings */
+  color: var(--heading-color);
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .app-title {
+    font-size: 4rem;
+  }
+}
+
+.content-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2.5rem; /* Increased gap for more breathing room */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  background-color: var(--card-background);
+  padding: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .content-layout {
+    flex-direction: row;
+    gap: 3rem; /* Even larger gap on desktop */
+  }
+  .content-layout > div {
+    flex: 1;
+    min-width: 0; /* Allow flex items to shrink */
+  }
+}
+
+.input-section,
+.preview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.error-message {
+  color: var(--error-color);
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+  text-align: center;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+/* General card-like styling for components */
+.card-style {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}

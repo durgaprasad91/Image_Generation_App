@@ -1,0 +1,93 @@
+/* src/GenerateButton.css */
+
+.generate-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* Increased gap */
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .generate-button-container {
+    flex-direction: row;
+  }
+}
+
+.generate-button,
+.abort-button {
+  width: 100%;
+  padding: 0.9rem 1.8rem;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.generate-button {
+  background-color: var(--primary-color);
+}
+
+.generate-button:hover {
+  background-color: #3a7bd5; /* Slightly darker primary on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.generate-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.4);
+}
+
+.loading-state {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* Increased gap */
+  width: 100%;
+  justify-content: center;
+}
+
+.abort-button {
+  background-color: var(--error-color);
+}
+
+.abort-button:hover {
+  background-color: #c53030; /* Slightly darker error on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.abort-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.4);
+}
+
+.spinner-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.spinner-icon {
+  animation: spin 1s linear infinite;
+  margin-right: 0.8rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  color: var(--primary-color);
+  border-top: 2px solid currentColor;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-radius: 50%;
+}
+
+.generating-text {
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

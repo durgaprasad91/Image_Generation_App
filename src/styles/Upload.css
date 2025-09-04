@@ -1,0 +1,99 @@
+/* src/Upload.css */
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem; /* Increased padding */
+  border: 1px solid var(--border-color);
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background-color: var(--card-background);
+  width: 100%;
+  max-width: 400px; /* Adjusted max-width */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0; /* Remove extra margin, handled by gap in parent */
+  position: relative;
+}
+
+.upload-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--heading-color);
+}
+
+.upload-input-wrapper {
+  width: 100%;
+  text-align: center; /* Center the label/button */
+  position: relative;
+  /* Hide default file input */
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.upload-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.upload-input-label {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: none;
+}
+
+.upload-input-label:hover {
+  background-color: #3a7bd5;
+}
+
+.upload-input:focus + .upload-input-label {
+  outline: 2px solid var(--primary-color); /* Visible focus state */
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+.upload-file-name {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  margin-top: 0.5rem;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.upload-preview-wrapper {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--background-color);
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.upload-preview-image {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 200px; /* Fixed height for consistency */
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
