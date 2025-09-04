@@ -44,7 +44,14 @@ const Upload: React.FC<UploadProps> = ({ imageUrl, setImage, error }) => {
       {error && <p className="error-message" role="alert">{error}</p>}
       {imageUrl && (
         <div className="upload-preview-wrapper">
-          <img id="preview-image" src={imageUrl} alt="Preview of selected image" className="upload-preview-image" aria-live="polite" />
+          <img 
+            id="preview-image" 
+            src={imageUrl} 
+            alt="Preview of selected image" 
+            className="upload-preview-image" 
+            aria-live="polite" 
+            title={fileName ? `Selected image: ${fileName}` : "No image selected"} 
+          />
         </div>
       )}
     </div>
